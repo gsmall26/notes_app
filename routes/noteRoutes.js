@@ -1,11 +1,9 @@
-// routes/noteRoutes.js
 const express = require('express');
 const { body, validationResult } = require('express-validator');
 const Note = require('../models/Note');
 
 const router = express.Router();
 
-// Helper: send validation errors in consistent shape
 function handleValidationErrors(req, res, next) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -20,8 +18,6 @@ function handleValidationErrors(req, res, next) {
   next();
 }
 
-// @route   GET /api/notes
-// @desc    Get all notes
 router.get('/', async (req, res) => {
   try {
     const notes = await Note.find().sort({ updatedAt: -1 });
@@ -32,8 +28,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// @route   POST /api/notes
-// @desc    Create a note
 router.post(
   '/',
   [
@@ -69,7 +63,6 @@ router.post(
       res.status(201).json({ success: true, data: note });
     } catch (err) {
       console.error(err);
-      // In case Mongoose validation fires too
       res.status(400).json({
         success: false,
         message: 'Failed to create note',
@@ -79,8 +72,6 @@ router.post(
   }
 );
 
-// @route   PUT /api/notes/:id
-// @desc    Update a note
 router.put(
   '/:id',
   [
@@ -126,8 +117,6 @@ router.put(
   }
 );
 
-// @route   DELETE /api/notes/:id
-// @desc    Delete a note
 router.delete('/:id', async (req, res) => {
   try {
     const note = await Note.findByIdAndDelete(req.params.id);
