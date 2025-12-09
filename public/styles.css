@@ -89,7 +89,7 @@ textarea {
 
 .hint {
   font-size: 0.875rem;
-  color: #7f8c8d;
+  color: #5a6c7d;
   margin-top: 0.25rem;
 }
 
@@ -123,7 +123,7 @@ textarea {
 
 button {
   padding: 0.75rem 1.5rem;
-  background-color: #3498db;
+  background-color: #1F7AB7;
   color: white;
   border: none;
   border-radius: 4px;
@@ -167,18 +167,18 @@ button:active {
 .note-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
   word-wrap: break-word;
 }
 
 .note-category {
   font-size: 0.875rem;
-  color: #7f8c8d;
+  color: white;
   margin-top: 0.25rem;
 }
 
 .note-pinned-badge {
-  background-color: #f39c12;
+  background-color: #e67e22;
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -189,7 +189,7 @@ button:active {
 
 .note-meta {
   font-size: 0.875rem;
-  color: #95a5a6;
+  color: #5a6c7d;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #ecf0f1;
 }
@@ -215,7 +215,7 @@ button:active {
 }
 
 .note-actions button:nth-child(2) {
-  background-color: #e74c3c;
+  background-color: #D52D1A;
 }
 
 .note-actions button:nth-child(2):hover {
@@ -223,11 +223,11 @@ button:active {
 }
 
 .note-actions button:nth-child(3) {
-  background-color: #f39c12;
+  background-color: #B35E14;
 }
 
 .note-actions button:nth-child(3):hover {
-  background-color: #e67e22;
+  background-color: #d35400;
 }
 
 footer {
@@ -265,15 +265,17 @@ footer p {
   
   .note-pinned-badge {
     font-size: 0.75rem;
-    color: #f97316;
+    color: #c2410c;
     font-weight: 600;
   }
   
   footer {
     font-size: 0.8rem;
-    color: #6b7280;
+    color: #4b5563;
     text-align: center;
   }
-   p {
+}
+
+  p {
     color: black
    }
